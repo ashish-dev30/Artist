@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Happy Birthday!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bl b1"></div>
+  <div class="bl b2"></div>
+  <canvas id="fx"></canvas>
+
+  <main class="card">
+    <div class="bw" id="bw" tabindex="0" role="button" aria-label="Tap the bunny">
+      <div class="say" id="say" aria-hidden="true"></div>
+      <svg class="bunny" viewBox="0 0 200 244" aria-hidden="true">
+        <g stroke="#5b3a6b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+          <ellipse cx="100" cy="238" rx="52" ry="5" fill="rgba(0,0,0,.12)" stroke="none" />
+          <g class="ear l" style="transform-origin:80px 95px">
+            <ellipse cx="72" cy="50" rx="17" ry="46" fill="#fff" />
+            <ellipse cx="72" cy="54" rx="8" ry="31" fill="#ffb7d0" stroke="none" />
+          </g>
+          <g class="ear r" style="transform-origin:120px 95px">
+            <ellipse cx="128" cy="50" rx="17" ry="46" fill="#fff" />
+            <ellipse cx="128" cy="54" rx="8" ry="31" fill="#ffb7d0" stroke="none" />
+          </g>
+          <ellipse cx="72" cy="228" rx="21" ry="10" fill="#fff" />
+          <ellipse cx="128" cy="228" rx="21" ry="10" fill="#fff" />
+          <ellipse cx="100" cy="192" rx="48" ry="44" fill="#fff" />
+          <ellipse cx="100" cy="198" rx="26" ry="27" fill="#ffe9f2" stroke="none" />
+          <circle cx="100" cy="115" r="46" fill="#fff" />
+          <g class="eye">
+            <g class="pp">
+              <ellipse cx="82" cy="112" rx="5.5" ry="8" fill="#3b2146" stroke="none" />
+              <circle cx="84" cy="109" r="2" fill="#fff" stroke="none" />
+            </g>
+          </g>
+          <g class="eye">
+            <g class="pp">
+              <ellipse cx="118" cy="112" rx="5.5" ry="8" fill="#3b2146" stroke="none" />
+              <circle cx="120" cy="109" r="2" fill="#fff" stroke="none" />
+            </g>
+          </g>
+          <circle cx="68" cy="128" r="8" fill="#ff9fc0" opacity=".65" stroke="none" />
+          <circle cx="132" cy="128" r="8" fill="#ff9fc0" opacity=".65" stroke="none" />
+          <path d="M95 122h10l-5 6z" fill="#ff6fa5" />
+          <path d="M100 128v4M100 132q-6 8-13 3M100 132q6 8 13 3" fill="none" stroke-width="2.5" />
+          <g>
+            <polygon points="100,34 83,76 117,76" fill="#ffd34e" />
+            <path d="M92 54l16 0M88 65l24 0" stroke="#ff6fa5" stroke-width="3" fill="none" />
+            <circle class="pom" cx="100" cy="33" r="6" fill="#ff6fa5" />
+          </g>
+          <g class="pen">
+            <rect x="128" y="148" width="9" height="46" rx="1.5" fill="#5ad1ff" />
+            <rect x="128" y="142" width="9" height="8" rx="2" fill="#ff9fc0" />
+            <polygon points="128,194 137,194 132.5,206" fill="#ffd9b0" />
+            <polygon points="131,201 134,201 132.5,206" fill="#3b2146" />
+          </g>
+          <ellipse cx="68" cy="180" rx="11" ry="10" fill="#fff" />
+          <ellipse cx="132" cy="184" rx="11" ry="10" fill="#fff" />
+        </g>
+      </svg>
+    </div>
+    <div class="txt">
+      <div class="date" id="date">3 November</div>
+      <h1 id="title" aria-label="Happy Birthday!"></h1>
+      <div id="name">Palak</div>
+      <svg class="sq" viewBox="0 0 300 16" aria-hidden="true">
+        <path pathLength="1" d="M4 9Q28 -2 52 9T100 9T148 9T196 9T244 9T296 9" />
+      </svg>
+      <p id="msg">Wishing you a super fun day!</p>
+      <div class="row"><button class="btn" id="btn" type="button">Surprise 🎁</button><button class="btn alt" id="bcake"
+          type="button">Cake 🎂</button><button class="btn alt" id="bwish" type="button">Wishes ✨</button></div>
+      <p class="hint">Tap the bunny 🐰 and scribble anywhere with your finger 🖍️</p>
+      <p class="from">From your friend, <b id="from">a friend</b></p>
+    </div>
+  </main>
+
+  <button class="mus" id="mus" type="button" aria-label="Music on or off" aria-pressed="false">🔇</button>
+  <div class="ov" id="ov">
+    <div class="pn" id="pc">
+      <button class="x" type="button" aria-label="Close">✕</button>
+      <h2>Make a wish! 🎂</h2>
+      <svg class="cake" viewBox="0 0 200 200">
+        <g stroke="#5b3a6b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+          <ellipse cx="100" cy="184" rx="92" ry="11" fill="#ffd9e8" />
+          <rect x="30" y="118" width="140" height="62" rx="12" fill="#ffb3d1" />
+          <rect x="55" y="74" width="90" height="48" rx="10" fill="#ffe9a8" />
+          <path d="M55 86Q65 100 75 86T95 86T115 86T135 86T145 86V82Q145 74 135 74H65Q55 74 55 82Z" fill="#fff" />
+          <path d="M30 126Q42 142 54 126T78 126T102 126T126 126T150 126T170 126V128Q170 118 160 118H40Q30 118 30 128Z"
+            fill="#fff" />
+          <g stroke="none">
+            <circle cx="50" cy="158" r="4" fill="#7c5cff" />
+            <circle cx="80" cy="164" r="4" fill="#ffd34e" />
+            <circle cx="110" cy="156" r="4" fill="#5ad1ff" />
+            <circle cx="140" cy="164" r="4" fill="#6be3a1" />
+            <circle cx="90" cy="104" r="3.5" fill="#ff6fa5" />
+            <circle cx="118" cy="108" r="3.5" fill="#7c5cff" />
+            <circle cx="72" cy="108" r="3.5" fill="#5ad1ff" />
+          </g>
+          <g class="cd" tabindex="0" role="button" aria-label="Blow out candle">
+            <rect x="76" y="52" width="8" height="24" rx="2" fill="#5ad1ff" />
+            <path d="M80 52v-4" stroke-width="2" />
+            <g class="fl" stroke="none">
+              <ellipse cx="80" cy="39" rx="6" ry="9" fill="#ffb21e" />
+              <ellipse cx="80" cy="42" rx="3" ry="5" fill="#fff3a0" />
+            </g>
+            <rect x="66" y="26" width="28" height="50" fill="transparent" stroke="none" />
+          </g>
+          <g class="cd" tabindex="0" role="button" aria-label="Blow out candle">
+            <rect x="96" y="52" width="8" height="24" rx="2" fill="#ff9fc0" />
+            <path d="M100 52v-4" stroke-width="2" />
+            <g class="fl" stroke="none">
+              <ellipse cx="100" cy="39" rx="6" ry="9" fill="#ffb21e" />
+              <ellipse cx="100" cy="42" rx="3" ry="5" fill="#fff3a0" />
+            </g>
+            <rect x="88" y="26" width="24" height="50" fill="transparent" stroke="none" />
+          </g>
+          <g class="cd" tabindex="0" role="button" aria-label="Blow out candle">
+            <rect x="116" y="52" width="8" height="24" rx="2" fill="#6be3a1" />
+            <path d="M120 52v-4" stroke-width="2" />
+            <g class="fl" stroke="none">
+              <ellipse cx="120" cy="39" rx="6" ry="9" fill="#ffb21e" />
+              <ellipse cx="120" cy="42" rx="3" ry="5" fill="#fff3a0" />
+            </g>
+            <rect x="110" y="26" width="28" height="50" fill="transparent" stroke="none" />
+          </g>
+        </g>
+      </svg>
+      <p id="cs"></p>
+      <button class="btn alt" id="rl" type="button" style="display:none;animation:none">Relight 🕯️</button>
+    </div>
+    <div class="pn" id="pw">
+      <button class="x" type="button" aria-label="Close">✕</button>
+      <h2>Wishes for you 🎈</h2>
+      <p class="wt" id="wt"></p>
+      <div class="wn"><button class="rb" id="wp" type="button" aria-label="Previous wish">◀</button><span
+          id="wc"></span><button class="rb" id="wn" type="button" aria-label="Next wish">▶</button></div>
+      <p class="sg">From your friend, <b id="from2"></b></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
